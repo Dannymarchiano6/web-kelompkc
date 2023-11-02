@@ -1,30 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-    
-</head>
-<body>
-    <div>
-        <x-header>
-        <div class="container mx-auto px-4 py-8">
-          <h1 class="text-4xl font-bold text-gray-800">Selamat datang di Laravel + Flowbite UI</h1>
-          <p class="text-gray-600 mt-4">Ini adalah contoh aplikasi yang menggunakan Laravel dan Flowbite UI untuk membuat dashboard admin yang modern dan responsif.</p>
-        </div>
-        </x-header>      
-    </div>
-    <div>
-        <x-navbar>
-        </x-navbar>
-    </div>
-    <diV>
-        <x-Footer class="fixed bottom-0 w-full bg-gray-200 p-4">
-        </x-footer>
-    </diV>
-</body>    
-</html>
+<x-layout>
+    <x-header>
+        <x-slot:title>Dashboard</x-slot:title>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sunt, assumenda dignissimos doloremque
+        reiciendis autem iusto saepe ut minima nesciunt?
+    </x-header>
+
+    <section class="mt-8 flex flex-col md:flex-row gap-8">
+        <x-card>
+            <x-slot:title>2021 Stats</x-slot:title>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus!
+        </x-card>
+        <x-card>
+            <x-slot:title>2022 Stats</x-slot:title>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, fugit.
+        </x-card>
+    </section>
+
+    <section class="mt-12">
+        <x-table />
+    </section>
+
+</x-layout>
